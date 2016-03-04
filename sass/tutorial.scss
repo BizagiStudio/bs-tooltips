@@ -1,0 +1,116 @@
+@import "../css/animate.css";
+
+@import "reset";
+@import "variables";
+@import "mixins";
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bs-pux-background {
+  @include set-size(100%, 100%, true);
+  background: url($image_url +'bg-pux.jpg') no-repeat;
+  position: fixed;
+  top: 0;
+}
+
+.bs-tooltip-tutorial {
+  &.bs-bg-lightbox {
+    background: url($image_url +'bg-lightbox.png') repeat;
+    @include set-size(100%, 100%, true);
+    position: fixed;
+    top:0;
+    z-index: 1;
+  }
+  %padding {
+    padding: 17px 40px 0;
+  }
+
+  .bs-tooltip-box {
+    @include set-shadow( 1px 1px 5px 1px rgba(214,214,214,1));
+    background: $white-color;
+    color: $gray-dark-color;
+    object-fit: contain;
+
+    &.bs-create-stake-holder-tooltip{
+      @include set-size(368px, 272px, true);
+      @include set-position(fixed, 355px, auto, auto, 860px, 3);
+    }
+
+    .bs-tooltip-header {
+      @extend %padding;
+      h1 {
+        border-bottom: 1px solid $gray-brigth-color;
+        padding-bottom: 17px;
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+
+
+    .bs-tooltip-description{
+      @extend %padding;
+      p {
+        padding-bottom: 17px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    .bs-tooltip-image-animation {
+
+      object-fit: contain;
+      &.bs-create-stakeholder-bg {
+        @include set-size( auto, 147px, true);
+        background: url($image_url +'bs-people.png') 45% 5px no-repeat;
+      }
+
+      .bs-bg-stakeholder{
+        background: url($image_url +'bs-stakeholder.png') no-repeat;
+        @include set-size( 68px, 126px, true);
+        position: relative;
+        left: 68px;
+        top: 10px;
+      }
+    }
+  }
+}
+
+.bs-caret-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $white-color;
+
+}
+
+.bs-caret-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid $white-color;
+  position: relative;
+  bottom: 10px;
+}
+
+.bs-caret-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $white-color;
+}
+
+.bs-caret-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right:10px solid $white-color;
+  position: absolute;
+  left: -10px;
+  top: 59px;
+}

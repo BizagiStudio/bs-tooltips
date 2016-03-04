@@ -1,0 +1,23 @@
+@mixin set-size($width, $height, $isBlock) {
+  width: $width;
+  height: $height;
+
+  @if $isBlock == true {
+    display: block;
+  }
+}
+
+@mixin set-position($position, $top, $right, $bottom, $left, $zIndex) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $zIndex;
+}
+
+@mixin set-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}

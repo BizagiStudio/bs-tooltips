@@ -1,0 +1,19 @@
+{
+  "name": "tutorial",
+  "version": "1.1.1",
+  "description": "tutorial tips",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tutorial",
+    "tips"
+  ],
+  "author": "vianch",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  }
+}
